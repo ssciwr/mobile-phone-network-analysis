@@ -1,0 +1,10 @@
+name: mobile-phone-network-analysis
+channels:
+  - conda-forge
+dependencies:
+  - jupyterlab
+  - nbclient
+  - nbformat
+  - numpy
+  - pyspark
+  - python=3.9
