@@ -1,6 +1,6 @@
 # Mobility network analysis from mobile phone data
 
-This project analysis raw mobile phone data and produces a mobility network between antennas. Additionally, it allows to map this network to a network of geographic regions using Voronoi tesselations. The implementation based on [pyspark](http://spark.apache.org/docs/latest/api/python/) represents a trade-off between simplicity of the implementation and scalability of the analysis.
+This project analyses raw mobile phone data and produces a mobility network between antennas. Additionally, it allows to map this network to a network of geographic regions using Voronoi tesselations. The implementation based on [pyspark](http://spark.apache.org/docs/latest/api/python/) represents a trade-off between simplicity of the implementation and scalability of the analysis.
 
 ## Installation
 
@@ -25,11 +25,14 @@ jupyter lab
 
 The original data that was used for this project cannot be shared under a free license.
 If you have similar data, you may place it in the `data` subdirectory. If you do not
-have access to data, you may generate synthetic data instead by doing the following:
+have access to data, you can generate synthetic data:
 
 ```
-
+python ./bin/generate.py
 ```
+
+You can also run this directly by running `notebooks/syntheticdata.ipynb` which will also
+allow you to tweak the characteristics of the generated dataset.
 
 ## License
 
