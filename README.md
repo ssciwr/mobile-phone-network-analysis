@@ -8,7 +8,8 @@ This project analyses raw mobile phone data and produces a mobility network betw
 
 ## Installation
 
-We recommend installing the software stack for this project using [Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html):
+It is possible to run the code in this repository without installation using above Binder link - though the available RAM is quite limiting.
+If you want to run locally, we recommend installing the software stack for this project using [Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html):
 
 ```
 git clone https://github.com/ssciwr/mobile-phone-network-analysis.git
@@ -38,6 +39,6 @@ python ./bin/generate.py
 You can also run this directly by running `notebooks/syntheticdata.ipynb` which will also
 allow you to tweak the characteristics of the generated dataset.
 
-## License
+## License + Copyright
 
-The software in this repository is provided under the MIT license.
+This repository is the outcome of a collaboration between Steffen Knoblauch ([GIScience Research Group](https://www.geog.uni-heidelberg.de/gis/index_en.html), Heidelberg University) and Dominic Kempf ([Scientific Software Center](https://ssc.iwr.uni-heidelberg.de), Heidelberg University). The software in this repository is provided under the MIT license.
