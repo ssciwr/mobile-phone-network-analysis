@@ -11,9 +11,9 @@ COPY --chown=${NB_UID} ./notebooks/*.ipynb ${HOME}/notebooks/
 ENV JUPYTER_ENABLE_LAB=yes
 
 # Generate synthetic data
-COPY ./bin/generate.py /opt/
 RUN mkdir ${HOME}/data && \
-    python /opt/generate.py
+    python -m pip install pipx && \
+    pipx run nbclick ./notebooks/syntheticdata.ipynb --filename ./data/synthetic.txt
 
 WORKDIR ${HOME}/notebooks
 
