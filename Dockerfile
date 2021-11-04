@@ -12,8 +12,8 @@ ENV JUPYTER_ENABLE_LAB=yes
 
 # Generate synthetic data
 RUN mkdir ${HOME}/data && \
-    python -m pip install pipx && \
-    pipx run nbclick ./notebooks/syntheticdata.ipynb --filename ./data/synthetic.txt
+    python -m pip install nbclick && \
+    nbclick ./notebooks/syntheticdata.ipynb --filename ./data/synthetic.txt
 
 WORKDIR ${HOME}/notebooks
 
