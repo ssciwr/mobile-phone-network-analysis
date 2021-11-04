@@ -33,12 +33,16 @@ If you have similar data, you may place it in the `data` subdirectory. If you do
 have access to data, you can generate synthetic data:
 
 ```
-python ./bin/generate.py
+nbclick ./notebooks/syntheticdata.ipynb --filename ./data/synthetic.txt
 ```
 
-You can also run this directly by running `notebooks/syntheticdata.ipynb` which will also
-allow you to tweak the characteristics of the generated dataset.
+If you want to tweak more characteristics of the generated dataset, you may set more parameters:
 
+```
+nbclick ./notebooks/syntheticdata.ipynb --help
+```
+
+Alternatively, you can also run the `syntheticdata.ipynb` notebook directly from Jupyter.
 ## License + Copyright
 
 This repository is the outcome of a collaboration between Steffen Knoblauch ([GIScience Research Group](https://www.geog.uni-heidelberg.de/gis/index_en.html), Heidelberg University) and Dominic Kempf ([Scientific Software Center](https://ssc.iwr.uni-heidelberg.de), Heidelberg University). The software in this repository is provided under the MIT license.

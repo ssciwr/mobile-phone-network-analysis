@@ -8,3 +8,5 @@ dependencies:
   - numpy
   - pyspark
   - python=3.9
+  - pip:
+    - nbclick
