@@ -16,3 +16,8 @@ RUN mkdir ${HOME}/data && \
     python /opt/generate.py
 
 WORKDIR ${HOME}/notebooks
+
+# Normally this should be initialized within the container, but the
+# relevant scripts do not seem to run on mybinder.org. This is my take
+# on quick-fixing the issue.
+ENV PYTHONPATH=/usr/local/spark/python/lib/py4j-0.10.9.2-src.zip:/usr/local/spark/python
