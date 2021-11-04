@@ -34,7 +34,7 @@ jobs:
 
     - name: Generate synthetic test data
       run: |
-        python ./bin/generate.py
+        nbclick ./notebooks/syntheticdata.ipynb --filename ./data/synthetic.txt
 
     - name: Run Python tests including notebooks
       run: |
