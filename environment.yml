@@ -2,11 +2,16 @@ name: mobile-phone-network-analysis
 channels:
   - conda-forge
 dependencies:
+  - geojson
   - jupyterlab
   - nbclient
   - nbformat
   - numpy
+  - pip
+  - pyproj
   - pyspark
   - python=3.9
+  - scipy
+  - shapely
   - pip:
     - nbclick
