@@ -3,15 +3,15 @@ channels:
   - conda-forge
 dependencies:
   - geojson
+  - geopandas
   - jupyterlab
   - nbclient
   - nbformat
   - numpy
   - pip
-  - pyproj
   - pyspark
   - python=3.9
   - scipy
-  - shapely
   - pip:
+    - pyproj
     - nbclick
