@@ -6,6 +6,8 @@ dependencies:
   - nbclient
   - nbformat
   - numpy
+  - pandas
+  - pip
   - pyspark
   - python=3.9
   - pip:
