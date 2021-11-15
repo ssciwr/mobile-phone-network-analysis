@@ -41,8 +41,9 @@ jobs:
         environment-file: environment.yml
         use-only-tar-bz2: true
 
-    - name: Install development dependencies
+    - name: Install Python (development) dependencies
       run: |
+        python -m pip install .
         python -m pip install -r requirements-dev.txt
 
     - name: Generate synthetic test data
