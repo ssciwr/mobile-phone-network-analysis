@@ -2,6 +2,8 @@ name: mobile-phone-network-analysis
 channels:
   - conda-forge
 dependencies:
+  - geojson
+  - geopandas
   - jupyterlab
   - nbclient
   - nbformat
@@ -10,5 +12,7 @@ dependencies:
   - pip
   - pyspark
   - python=3.9
+  - scipy
   - pip:
+    - pyproj
     - nbclick

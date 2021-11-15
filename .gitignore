@@ -1,5 +1,7 @@
 # We ignore data files unless explicitly forced with -f
 *.csv
+*.geojson
+*.npy
 *.txt
 
 #

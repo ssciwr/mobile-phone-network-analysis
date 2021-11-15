@@ -1,11 +1,19 @@
 FROM jupyter/pyspark-notebook:2021-11-01
 
-# Correct folders in the home directory
-RUN mkdir ${HOME}/notebooks &&  \
-    rm -rf ${HOME}/work
+# Install repository content
+COPY --chown=${NB_UID} . /opt/mobility
 
-# Copy the notebooks into the container
-COPY --chown=${NB_UID} ./notebooks/*.ipynb ${HOME}/notebooks/
+# Install Python package
+RUN python -m pip install /opt/mobility
+
+# Install Conda environment
+RUN conda env update -n base --file /opt/mobility/environment.yml && \
+    conda clean -a -q -y
+
+# Move the notebooks to the correct location
+RUN mkdir ${HOME}/notebooks &&  \
+    rm -rf ${HOME}/work && \
+    cp /opt/mobility/notebooks/*.ipynb ${HOME}/notebooks/
 
 # Make JupyterLab the default for this application
 ENV JUPYTER_ENABLE_LAB=yes
@@ -13,7 +21,7 @@ ENV JUPYTER_ENABLE_LAB=yes
 # Generate synthetic data
 RUN mkdir ${HOME}/data && \
     python -m pip install nbclick && \
-    nbclick ./notebooks/syntheticdata.ipynb --filename ./data/synthetic.txt
+    nbclick ./notebooks/syntheticdata.ipynb --data_directory ./data
 
 WORKDIR ${HOME}/notebooks
 
