@@ -23,8 +23,6 @@ RUN mkdir ${HOME}/data && \
     python -m pip install nbclick && \
     nbclick ./notebooks/syntheticdata.ipynb --data_directory ./data
 
-WORKDIR ${HOME}/notebooks
-
 # Normally this should be initialized within the container, but the
 # relevant scripts do not seem to run on mybinder.org. This is my take
 # on quick-fixing the issue.
