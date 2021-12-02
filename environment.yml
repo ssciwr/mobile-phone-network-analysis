@@ -5,6 +5,7 @@ dependencies:
   - geojson
   - geopandas
   - jupyterlab
+  - matplotlib
   - nbclient
   - nbformat
   - numpy
