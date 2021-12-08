@@ -19,11 +19,26 @@ conda env create -f environment.yml --force
 
 ## Usage
 
-The best way to reproduce the analysis is to manually run the contained Jupyter notebooks:
+The code is provided as a number of Jupyter notebooks in the `notebooks` directory:
+
+* `mobilitymatrix.ipynb` implements the large scale data analysis of call data using PySpark and creates an antenna-to-antenna mobility matrix from that data. The result is stored as `numpy` data structure.
+* `mobilitymatrix_pandas.ipynb` is a proof-of-concept reference implementation of the above in `pandas`.
+* `tesselation.ipynb` allows to remap the previously generated antenna-to-antenna matrix to a mobility matrix between geographic regions. In the process it uses Voronoi tesselations.
+* `timedistribution.ipynb` allows to inspect the raw data for distributions of times betweensingle user events. This is interesting to get an understanding of whether a thresholding is necessary.
+* `syntheticdata.ipynb` can be used to generate synthetic data to test the code in absence of real data.
+
+The notebooks can be run from the frontend which can be started like this:
 
 ```
 conda activate mobile-phone-network-analysis
 jupyter lab
+```
+
+Alternatively, the notebooks can be used from a command-line interface using `nbclick`.
+To learn about possible configuration values, do the following:
+
+```
+python -m nbclick NOTEBOOK --help
 ```
 
 ## Data availability
