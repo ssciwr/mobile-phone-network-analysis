@@ -1,7 +1,7 @@
 # Mobility network analysis from mobile phone data
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/ssciwr/mobile-phone-network-analysis/CI)](https://github.com/ssciwr/mobile-phone-network-analysis/actions?query=workflow%3ACI)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ssciwr/mobile-phone-network-analysis/ci.yml?branch=main)](https://github.com/ssciwr/mobile-phone-network-analysis/actions/workflows/ci.yml)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ssciwr/mobile-phone-network-analysis/main)
 
 This project analyses raw mobile phone data and produces a mobility network between antennas. Additionally, it allows to map this network to a network of geographic regions using Voronoi tesselations. The implementation based on [pyspark](http://spark.apache.org/docs/latest/api/python/) represents a trade-off between simplicity of the implementation and scalability of the analysis.
